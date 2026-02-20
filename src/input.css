@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+body {
+    font-family: 'Inter', sans-serif;
+
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.valentine-banner {
+    background: linear-gradient(150deg, #5b21b6 0%, #7c3aed 55%, #9333ea 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 210px;
+}
+
+.relay-banner {
+    background: #8b0045;
+    position: relative;
+    overflow: hidden;
+    min-height: 210px;
+}
+
+.relay-shape-a {
+    position: absolute;
+    top: -30px;
+    right: 120px;
+    width: 85px;
+    height: 170px;
+    background: #e91e8c;
+    transform: rotate(28deg);
+    border-radius: 8px;
+    opacity: 0.85;
+}
+
+.relay-shape-b {
+    position: absolute;
+    top: -15px;
+    right: 60px;
+    width: 65px;
+    height: 185px;
+    background: #f48fb1;
+    transform: rotate(15deg);
+    border-radius: 8px;
+    opacity: 0.65;
+}
+
+.relay-shape-c {
+    position: absolute;
+    bottom: -40px;
+    right: 20px;
+    width: 95px;
+    height: 130px;
+    background: #e91e8c;
+    transform: rotate(-8deg);
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.relay-shape-d {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 100%;
+    background: #ad1457;
+    opacity: 0.9;
+    transform: skewX(-4deg) translateX(8px);
+}
+
+.category-card {
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+
+.relay-logo {
+    font-size: 3.6rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -3px;
+    line-height: 1;
+    color: white;
+}
+
+.pink-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+/* .heart-dots::before,
+.heart-dots::after {
+    content: '♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥';
+    position: absolute;
+    color: rgba(219, 39, 119, 0.35);
+    font-size: 11px;
+    letter-spacing: 6px;
+    white-space: nowrap;
+}
+
+.heart-dots::before {
+    top: 6px;
+    left: 0;
+}
+
+.heart-dots::after {
+    top: 24px;
+    left: -18px;
+} */

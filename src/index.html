@@ -1,0 +1,619 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Chow Deck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body class="container mx-auto">
+  <nav class="mt-5 flex justify-between">
+    <div class="flex gap-5">
+      <img class="w-11 h-11 rounded-[5px]" src="./images/logo.png" alt="logo">
+      <div class="flex gap-1.5 cursor-pointer mt-3">
+        <i class="text-green-400 pt-1 fa-solid fa-location-dot"></i>
+        <p class="font-light text-gray-950">Lagos</p>
+        <i class="pt-1.5 fa-solid fa-angle-down"></i>
+      </div>
+    </div>
+    <div class="flex gap-7">
+      <div class="relative w-72">
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+        <input type="text" placeholder="Select an address to search..." class="w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-lg 
+           focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-blue-300
+           placeholder-gray-400 transition" />
+      </div>
+      <div class="flex gap-3">
+        <div class="cursor-pointer w-10 h-10 flex items-center justify-center rounded-full bg-green-900">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="18" width="18"
+            class="text-white" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z">
+            </path>
+            <circle cx="10.5" cy="19.5" r="1.5"></circle>
+            <circle cx="17.5" cy="19.5" r="1.5"></circle>
+          </svg>
+        </div>
+        <div class=" cursor-pointer w-10 h-10 flex items-center justify-center rounded-full bg-green-900">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-white"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"></path>
+            <path
+              d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="bg-white">
+      <div class="max-w-5xl mx-auto px-8 py-10">
+        <div class="flex items-center justify-between mb-7">
+          <h1 class="text-[1.6rem] font-bold text-gray-900 tracking-tight">Explore Categories</h1>
+          <button class="flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-sm font-semibold shadow-sm"
+            style="background-color: #1a5c48;">
+            Filter&nbsp;<i class="fa-solid fa-sliders text-sm"></i>
+          </button>
+        </div>
+
+        <div class=" hide-scrollbar flex gap-4 overflow-x-auto pb-1">
+
+          <div
+            class="category-card flex-shrink-0 flex flex-col items-center justify-center rounded-2xl pt-5 pb-4 px-4 w-[148px] h-[160px] gap-3"
+            style="background-color: #fce8ea;">
+            <i class="fa-solid fa-store text-[2.8rem]" style="color: #1a1a1a;"></i>
+            <span class="text-sm font-medium text-gray-800">Restaurants</span>
+          </div>
+
+          <div
+            class="category-card flex-shrink-0 flex flex-col items-center justify-center rounded-2xl pt-5 pb-4 px-4 w-[148px] h-[160px] gap-3"
+            style="background-color: #fdf6e0;">
+            <i class="fa-solid fa-basket-shopping text-[2.8rem]" style="color: #c48a00;"></i>
+            <span class="text-sm font-medium text-gray-800">Shops</span>
+          </div>
+
+          <div
+            class="category-card flex-shrink-0 flex flex-col items-center justify-center rounded-2xl pt-5 pb-4 px-4 w-[148px] h-[160px] gap-3"
+            style="background-color: #e6eefa;">
+            <span class="relative" style="font-size: 2.8rem; line-height:1;">
+              <i class="fa-solid fa-capsules" style="color: #3b82f6;"></i>
+            </span>
+            <span class="text-sm font-medium text-gray-800">Pharmacy</span>
+          </div>
+
+          <div
+            class="category-card flex-shrink-0 flex flex-col items-center justify-center rounded-2xl pt-5 pb-4 px-4 w-[148px] h-[160px] gap-3"
+            style="background-color: #e4f5ef;">
+            <i class="fa-solid fa-shop text-[2.8rem]" style="color: #10b981;"></i>
+            <span class="text-sm font-medium text-gray-800">Local Markets</span>
+          </div>
+
+          <div
+            class="category-card flex-shrink-0 flex flex-col items-center justify-center rounded-2xl pt-5 pb-4 px-4 w-[148px] h-[160px] gap-3"
+            style="background-color: #f0eef8;">
+            <i class="fa-solid fa-bowl-food text-[2.8rem]" style="color: #7c3aed;"></i>
+            <span class="text-sm font-medium text-gray-800">African Meals</span>
+          </div>
+
+          <div
+            class="category-card flex-shrink-0 flex flex-col items-center justify-center rounded-2xl pt-5 pb-4 px-4 w-[148px] h-[160px] gap-3"
+            style="background-color: #e8f5ea;">
+            <i class="fa-solid fa-seedling text-[2.8rem]" style="color: #16a34a;"></i>
+            <span class="text-sm font-medium text-gray-800">Healthy</span>
+          </div>
+
+          <div
+            class="category-card flex-shrink-0 flex flex-col items-center justify-center rounded-2xl pt-5 pb-4 px-4 w-[148px] h-[160px] gap-3"
+            style="background-color: #fdf9e0;">
+            <i class="fa-solid fa-bottle-water text-[2.8rem]" style="color: #ca8a04;"></i>
+            <span class="text-sm font-medium text-gray-800">Drinks</span>
+          </div>
+
+        </div>
+
+        <div class="flex mt-7 gap-2">
+          <img src="./images/left.png" alt="Previous" class="cursor-pointer transition duration-200 
+           hover:scale-110 hover:opacity-80" />
+
+          <img src="./images/right.png" alt="Next" class="cursor-pointer transition duration-200 
+           hover:scale-110 hover:opacity-80" />
+        </div>
+
+        <!-- <div class="flex gap-5 mt-10">
+
+          <div class="valentine-banner rounded-2xl flex-1 p-6 flex flex-col justify-between" style="min-height: 210px;">
+
+            <div class="heart-dots absolute inset-0 overflow-hidden pointer-events-none"></div>
+
+            <div class="pink-wave">
+              <svg viewBox="0 0 700 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+                style="display:block; height:58px; width:100%;">
+                <path
+                  d="M0,28 C70,56 140,4 210,28 C280,52 350,4 420,28 C490,52 560,4 630,28 C660,40 680,34 700,30 L700,70 L0,70 Z"
+                  fill="#be185d" opacity="0.95" />
+                <path d="M0,42 C90,18 180,58 270,38 C360,18 450,55 540,32 C600,18 650,46 700,40 L700,70 L0,70 Z"
+                  fill="#9d174d" opacity="0.85" />
+              </svg>
+            </div>
+
+            <div class="flex items-center gap-1.5 relative z-10">
+              <i class="fa-solid fa-heart text-white text-xs"></i>
+              <span class="text-white text-sm font-bold tracking-wide">Chowdeck</span>
+            </div>
+
+            <div class="relative z-10 mt-3" style="max-width: 58%;">
+              <h2 class="text-white font-bold leading-snug" style="font-size: 1.25rem;">
+                Happy Valentine's day! <span style="color: #f9a8d4;">shop special deals just for you</span>
+              </h2>
+            </div>
+
+            <span
+              style="position:absolute; right:130px; bottom:46px; font-size:46px; z-index:10; transform:rotate(6deg); filter:drop-shadow(2px 4px 8px rgba(0,0,0,0.3));">🧁</span>
+            <span
+              style="position:absolute; right:60px; bottom:38px; font-size:54px; z-index:10; transform:rotate(-4deg); filter:drop-shadow(2px 4px 8px rgba(0,0,0,0.3));">🍔</span>
+            <span
+              style="position:absolute; right:10px; bottom:40px; font-size:48px; z-index:10; filter:drop-shadow(2px 4px 8px rgba(0,0,0,0.3));">🥤</span>
+
+            <p class="relative z-10 mt-auto"
+              style="font-size: 0.7rem; color: #fbcfe8; max-width: 60%; padding-bottom: 8px; opacity: 0.9;">
+              Exclusive discounts from Chicken Republic, Item7go, The Place, Burger king and many more
+            </p>
+          </div>
+
+          <div class="relay-banner rounded-2xl flex-1 flex flex-col justify-center p-8" style="min-height: 210px;">
+            <div class="relay-shape-a"></div>
+            <div class="relay-shape-b"></div>
+            <div class="relay-shape-c"></div>
+            <div class="relay-shape-d"></div>
+
+            <div class="relative z-10">
+              <div class="relay-logo">relay</div>
+              <div
+                style="color: #f9a8d4; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-top: -4px; margin-bottom: 14px;">
+                BY CHOWDECK</div>
+              <p class="text-white font-bold" style="font-size: 1.2rem; line-height: 1.4;">Send packages<br>easily with
+                relay!</p>
+            </div>
+          </div>
+
+        </div> -->
+
+      </div>
+    </section>
+    <section class="bg-white px-10 py-10 max-w-[1280px] mx-auto">
+      <!-- ── SECTION 1: Handpicked for you ── -->
+      <section class="mb-14">
+        <h2 class="text-[22px] font-bold text-gray-900 mb-7 leading-tight">Handpicked for you 💚</h2>
+
+        <div class="relative flex items-start">
+          <button
+            class="flex-shrink-0 mt-24 mr-4 bg-white border border-gray-200 rounded-full shadow w-10 h-10 flex items-center justify-center text-gray-500 hover:shadow-md transition-shadow z-10">
+            <i class="fa-solid fa-chevron-left text-sm"></i>
+          </button>
+          <div class="flex gap-5 overflow-x-auto hide-scrollbar flex-1">
+            <div class="flex-shrink-0 w-[350px]">
+              <div class="relative rounded-2xl overflow-hidden shadow-sm">
+                <img
+                  src="https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=700"
+                  class="w-full h-[210px] object-cover" alt="Mega Chicken – Ikeja" />
+                <button
+                  class="absolute top-3 left-3 bg-amber-400 rounded-full w-9 h-9 flex items-center justify-center shadow-md">
+                  <i class="fa-solid fa-heart text-white text-sm"></i>
+                </button>
+                <div class="absolute bottom-3 right-3 bg-white/95 rounded-xl px-3 py-2 flex items-center gap-2 shadow">
+                  <i class="fa-solid fa-gift text-orange-400 text-sm"></i>
+                  <span class="text-[13px] font-semibold text-gray-800">Up to 30% off</span>
+                </div>
+              </div>
+              <div class="mt-3 px-0.5">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900 text-[15px]">Mega Chicken – Ikeja</h3>
+                  <div class="flex items-center gap-1">
+                    <span class="text-[14px] text-gray-700 font-medium">4.35</span>
+                    <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1.5 mt-1.5 text-gray-400">
+                  <i class="fa-regular fa-clock text-xs"></i>
+                  <span class="text-[13px]">28 – 38 mins</span>
+                </div>
+                <div class="flex items-center gap-4 mt-2 flex-wrap">
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">AFRICAN</span>
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">FAST FOOD</span>
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">CHOWSMART</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-[350px]">
+              <div class="relative rounded-2xl overflow-hidden shadow-sm">
+                <img src="https://files.chowdeck.com/fit-in/1200x675/images/ctnafgkfolplhll7laxr/1690558855.jpg"
+                  class="w-full h-[210px] object-cover" alt="Chicken Republic – Ogba" />
+                <button
+                  class="absolute top-3 left-3 bg-amber-400 rounded-full w-9 h-9 flex items-center justify-center shadow-md">
+                  <i class="fa-solid fa-heart text-white text-sm"></i>
+                </button>
+                <div class="absolute bottom-3 right-3 bg-white/95 rounded-xl px-3 py-2 flex items-center gap-2 shadow">
+                  <i class="fa-solid fa-gift text-orange-400 text-sm"></i>
+                  <span class="text-[13px] font-semibold text-gray-800">Up to 40% Off + Free Delivery</span>
+                </div>
+              </div>
+              <div class="mt-3 px-0.5">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900 text-[15px]">Chicken Republic – Ogba</h3>
+                  <div class="flex items-center gap-1">
+                    <span class="text-[14px] text-gray-700 font-medium">4.22</span>
+                    <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1.5 mt-1.5 text-gray-400">
+                  <i class="fa-regular fa-clock text-xs"></i>
+                  <span class="text-[13px]">44 – 54 mins</span>
+                </div>
+                <div class="flex items-center gap-4 mt-2 flex-wrap">
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">AFRICAN</span>
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">CHICKEN</span>
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">EVERY CITIZEN MUST
+                    COLLECT</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-[350px]">
+              <div class="relative rounded-2xl overflow-hidden shadow-sm">
+                <img
+                  src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=700"
+                  class="w-full h-[210px] object-cover" alt="Ajishafe" />
+                <button
+                  class="absolute top-3 left-3 bg-amber-400 rounded-full w-9 h-9 flex items-center justify-center shadow-md">
+                  <i class="fa-solid fa-heart text-white text-sm"></i>
+                </button>
+              </div>
+              <div class="mt-3 px-0.5">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900 text-[15px]">Ajishafe</h3>
+                  <div class="flex items-center gap-1">
+                    <span class="text-[14px] text-gray-700 font-medium">4.18</span>
+                    <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1.5 mt-1.5 text-gray-400">
+                  <i class="fa-regular fa-clock text-xs"></i>
+                  <span class="text-[13px]">35 – 45 mins</span>
+                </div>
+                <div class="flex items-center gap-4 mt-2 flex-wrap">
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">AFRICAN</span>
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">IKEJA GRA</span>
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">SNA...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="flex-shrink-0 mt-24 ml-4 bg-white border border-gray-200 rounded-full shadow w-10 h-10 flex items-center justify-center text-gray-500 hover:shadow-md transition-shadow z-10">
+            <i class="fa-solid fa-chevron-right text-sm"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- ── SECTION 2: All Restaurants ── -->
+      <section class="mb-14">
+        <h2 class="text-[22px] font-bold text-gray-900 mb-7 leading-tight">All Restaurants</h2>
+
+        <div class="grid grid-cols-3 gap-5">
+          <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <div class="relative">
+              <img src="https://files.chowdeck.com/fit-in/1200x675/images/ctnafgkfolplhll7laxr/1690558855.jpg"
+                class="w-full h-[210px] object-cover" alt="The Place – Aviation Mall" />
+              <button
+                class="absolute top-3 left-3 bg-amber-400 rounded-full w-9 h-9 flex items-center justify-center shadow-md">
+                <i class="fa-solid fa-heart text-white text-sm"></i>
+              </button>
+              <div class="absolute bottom-3 right-3 bg-white/95 rounded-xl px-3 py-2 flex items-center gap-2 shadow">
+                <i class="fa-solid fa-gift text-orange-400 text-sm"></i>
+                <span class="text-[13px] font-semibold text-gray-800">2800 For Asun Fried Rice</span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between">
+                <h3 class="font-semibold text-gray-900 text-[15px]">The Place – Aviation Mall</h3>
+                <div class="flex items-center gap-1">
+                  <span class="text-[14px] text-gray-700 font-medium">4.31</span>
+                  <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 mt-1.5 text-gray-400">
+                <i class="fa-regular fa-clock text-xs"></i>
+                <span class="text-[13px]">55 – 65 mins</span>
+              </div>
+              <div class="flex items-center gap-4 mt-2 flex-wrap">
+                <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">SURULERE</span>
+                <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">CONTINENTAL</span>
+                <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">AFRICAN</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <div class="relative">
+              <img
+                src="https://images.pexels.com/photos/2491461/pexels-photo-2491461.jpeg?auto=compress&cs=tinysrgb&w=700"
+                class="w-full h-[210px] object-cover" alt="Nelson's grillz and buffeteria" />
+              <button
+                class="absolute top-3 left-3 bg-amber-400 rounded-full w-9 h-9 flex items-center justify-center shadow-md">
+                <i class="fa-solid fa-heart text-white text-sm"></i>
+              </button>
+              <div class="absolute bottom-3 right-3 bg-white/95 rounded-xl px-3 py-2 flex items-center gap-2 shadow">
+                <i class="fa-solid fa-gift text-orange-400 text-sm"></i>
+                <span class="text-[13px] font-semibold text-gray-800">10% off All Menu Items!</span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between">
+                <h3 class="font-semibold text-gray-900 text-[15px]">Nelson's grillz and buffeteria</h3>
+                <div class="flex items-center gap-1">
+                  <span class="text-[14px] text-gray-700 font-medium">4.49</span>
+                  <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 mt-1.5 text-gray-400">
+                <i class="fa-regular fa-clock text-xs"></i>
+                <span class="text-[13px]">28 – 38 mins</span>
+              </div>
+              <div class="flex items-center gap-4 mt-2 flex-wrap">
+                <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">GRILLZ</span>
+                <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">OREGUN</span>
+                <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">IKEJA GRA</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <div class="relative">
+              <img
+                src="https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=700"
+                class="w-full h-[210px] object-cover object-top" alt="Foodzonelagos" />
+              <button
+                class="absolute top-3 left-3 bg-amber-400 rounded-full w-9 h-9 flex items-center justify-center shadow-md">
+                <i class="fa-solid fa-heart text-white text-sm"></i>
+              </button>
+              <div
+                class="absolute top-3 right-3 bg-[#1db87a] text-white rounded-full px-3 py-1.5 flex items-center gap-1.5 shadow">
+                <i class="fa-regular fa-clock text-xs"></i>
+                <span class="text-[12px] font-semibold">Pre-order</span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between">
+                <h3 class="font-semibold text-gray-900 text-[15px]">Foodzonelagos</h3>
+                <div class="flex items-center gap-1">
+                  <span class="text-[14px] text-gray-700 font-medium">5.00</span>
+                  <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 mt-1.5 text-gray-400">
+                <i class="fa-regular fa-clock text-xs"></i>
+                <span class="text-[13px]">5 – 15 mins</span>
+              </div>
+              <div class="flex items-center gap-4 mt-2 flex-wrap">
+                <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">JOLLOF RICE</span>
+                <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">CHICKEN DISHES</span>
+                <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">SNACKS</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── SECTION 3: Discounts ── -->
+      <section class="mb-14">
+        <h2 class="text-[22px] font-bold text-gray-900 mb-7 leading-tight">Discounts 🏷️</h2>
+        <div class="relative flex items-start">
+          <button
+            class="flex-shrink-0 mt-24 mr-4 bg-white border border-gray-200 rounded-full shadow w-10 h-10 flex items-center justify-center text-gray-500 hover:shadow-md transition-shadow z-10">
+            <i class="fa-solid fa-chevron-left text-sm"></i>
+          </button>
+          <div class="flex gap-5 overflow-x-auto hide-scrollbar flex-1">
+            <div class="flex-shrink-0 w-[350px]">
+              <div class="relative rounded-2xl overflow-hidden shadow-sm">
+                <img src="https://files.chowdeck.com/fit-in/1200x675/images/ctnafgkfolplhll7laxr/1690558855.jpg"
+                  class="w-full h-[210px] object-cover" alt="Nelson's grillz and buffeteria" />
+                <button
+                  class="absolute top-3 left-3 bg-amber-400 rounded-full w-9 h-9 flex items-center justify-center shadow-md">
+                  <i class="fa-solid fa-heart text-white text-sm"></i>
+                </button>
+                <div class="absolute bottom-3 right-3 bg-white/95 rounded-xl px-3 py-2 flex items-center gap-2 shadow">
+                  <i class="fa-solid fa-gift text-orange-400 text-sm"></i>
+                  <span class="text-[13px] font-semibold text-gray-800">10% off All Menu Items!</span>
+                </div>
+              </div>
+              <div class="mt-3 px-0.5">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900 text-[15px]">Nelson's grillz and buffeteria</h3>
+                  <div class="flex items-center gap-1">
+                    <span class="text-[14px] text-gray-700 font-medium">4.49</span>
+                    <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1.5 mt-1.5 text-gray-400">
+                  <i class="fa-regular fa-clock text-xs"></i>
+                  <span class="text-[13px]">28 – 38 mins</span>
+                </div>
+                <div class="flex items-center gap-4 mt-2 flex-wrap">
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">GRILLZ</span>
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">OREGUN</span>
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">IKEJA GRA</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-[350px]">
+              <div class="relative rounded-2xl overflow-hidden shadow-sm">
+                <img
+                  src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=700"
+                  class="w-full h-[210px] object-cover" alt="Scoop'd Ice Cream Bar – ICM" />
+                <button
+                  class="absolute top-3 left-3 bg-amber-400 rounded-full w-9 h-9 flex items-center justify-center shadow-md">
+                  <i class="fa-solid fa-heart text-white text-sm"></i>
+                </button>
+                <div class="absolute bottom-3 right-3 bg-white/95 rounded-xl px-3 py-2 flex items-center gap-2 shadow">
+                  <i class="fa-solid fa-gift text-orange-400 text-sm"></i>
+                  <span class="text-[13px] font-semibold text-gray-800">Up to 40% OFF!!!</span>
+                </div>
+              </div>
+              <div class="mt-3 px-0.5">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900 text-[15px]">Scoop'd Ice Cream Bar – ICM</h3>
+                  <div class="flex items-center gap-1">
+                    <span class="text-[14px] text-gray-700 font-medium">4.51</span>
+                    <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1.5 mt-1.5 text-gray-400">
+                  <i class="fa-regular fa-clock text-xs"></i>
+                  <span class="text-[13px]">18 – 28 mins</span>
+                </div>
+                <div class="flex items-center gap-4 mt-2 flex-wrap">
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">ICE CREAM</span>
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">PASTRY</span>
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">PROMOTIONS</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-[350px]">
+              <div class="relative rounded-2xl overflow-hidden shadow-sm">
+                <img
+                  src="https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&w=700"
+                  class="w-full h-[210px] object-cover" alt="Krispy Kreme – ICM" />
+                <button
+                  class="absolute top-3 left-3 bg-amber-400 rounded-full w-9 h-9 flex items-center justify-center shadow-md">
+                  <i class="fa-solid fa-heart text-white text-sm"></i>
+                </button>
+              </div>
+              <div class="mt-3 px-0.5">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900 text-[15px]">Krispy Kreme – ICM</h3>
+                  <div class="flex items-center gap-1">
+                    <span class="text-[14px] text-gray-700 font-medium">4.60</span>
+                    <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1.5 mt-1.5 text-gray-400">
+                  <i class="fa-regular fa-clock text-xs"></i>
+                  <span class="text-[13px]">18 – 28 mins</span>
+                </div>
+                <div class="flex items-center gap-4 mt-2 flex-wrap">
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">DOUGHNUTS</span>
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">PROMOS</span>
+                  <span class="text-[11px] font-bold text-[#2e9e7c] uppercase tracking-wider">I...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="flex-shrink-0 mt-24 ml-4 bg-white border border-gray-200 rounded-full shadow w-10 h-10 flex items-center justify-center text-gray-500 hover:shadow-md transition-shadow z-10">
+            <i class="fa-solid fa-chevron-right text-sm"></i>
+          </button>
+        </div>
+      </section>
+
+    </section>
+  </main>
+  <footer class="bg-white min-h-screen flex items-end">
+    <div class="w-full border-t border-gray-200">
+      <div class="max-w-6xl mx-auto px-10 pt-12 pb-0">
+        <div class="flex flex-row gap-16">
+          <div class="flex-shrink-0 w-44">
+            <div class="flex items-center gap-2">
+              <img src="https://chowdeck.com/store/_next/image?url=%2Fstore%2Fimages%2FSecondaryLogo.png&w=256&q=75" alt="">
+              <!-- <svg width="44" height="40" viewBox="0 0 44 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="44" height="40" rx="9" fill="#1B5E3B" />
+                <path
+                  d="M22 7C14.268 7 8 12.82 8 20C8 23.09 9.18 25.93 11.18 28.14L9 35L16.28 32.86C18.05 33.59 20 34 22 34C29.732 34 36 28.18 36 21C36 13.82 29.732 7 22 7Z"
+                  fill="white" />
+                <text x="22" y="25" text-anchor="middle" fill="#1B5E3B" font-size="12" font-weight="800"
+                  font-family="Arial, sans-serif">C</text>
+              </svg> -->
+              <!-- <span class="text-[#1B5E3B] font-bold text-[1.45rem] tracking-tight">Chowdeck</span> -->
+            </div>
+          </div>
+
+          <div class="flex flex-1 justify-between">
+            <div>
+              <h3 class="text-[0.65rem] font-semibold tracking-[0.15em] text-gray-900 uppercase mb-5">Locations</h3>
+              <ul class="space-y-[1.1rem]">
+                <li><a href="#" class="text-gray-700 text-sm hover:text-[#1B5E3B] transition-colors">Community 25</a>
+                </li>
+                <li><a href="#" class="text-gray-700 text-sm hover:text-[#1B5E3B] transition-colors">NYSC Camp
+                    Iseyin</a></li>
+                <li><a href="#" class="text-gray-700 text-sm hover:text-[#1B5E3B] transition-colors">Enugu Nysc
+                    camp</a></li>
+                <li><a href="#" class="text-gray-700 text-sm hover:text-[#1B5E3B] transition-colors">Benin Nysc
+                    camp</a></li>
+                <li><a href="#" class="text-gray-700 text-sm hover:text-[#1B5E3B] transition-colors leading-snug">Port
+                    harcourt Nysc<br>camp</a></li>
+                <li><a href="#" class="text-gray-700 text-sm hover:text-[#1B5E3B] transition-colors">Jos Nysc Camp</a>
+                </li>
+                <li class="pt-1"><a href="#"
+                    class="text-[#1B5E3B] text-sm font-medium underline underline-offset-1 hover:opacity-75 transition-opacity">See
+                    more</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-[0.65rem] font-semibold tracking-[0.15em] text-gray-900 uppercase mb-5">Download</h3>
+              <ul class="space-y-[1.1rem]">
+                <li><a href="#" class="text-gray-700 text-sm hover:text-[#1B5E3B] transition-colors">Google Play
+                    Store</a></li>
+                <li><a href="#" class="text-gray-700 text-sm hover:text-[#1B5E3B] transition-colors">iOS App Store</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-[0.65rem] font-semibold tracking-[0.15em] text-gray-900 uppercase mb-5">Get Help</h3>
+              <ul class="space-y-[1.1rem]">
+                <li><a href="#" class="text-gray-700 text-sm hover:text-[#1B5E3B] transition-colors">Email</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-[0.65rem] font-semibold tracking-[0.15em] text-gray-900 uppercase mb-5">Legal</h3>
+              <ul class="space-y-[1.1rem]">
+                <li><a href="#" class="text-gray-700 text-sm hover:text-[#1B5E3B] transition-colors">Privacy
+                    Policy</a></li>
+                <li><a href="#" class="text-gray-700 text-sm hover:text-[#1B5E3B] transition-colors">Terms of use</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="mt-12 border-t border-gray-200 py-6 flex items-center justify-between">
+          <p class="text-gray-500 text-sm">© 2022, Chowdeck.</p>
+          <div class="flex items-center gap-5">
+            <a href="#" class="text-gray-500 hover:text-gray-700 transition-colors">
+              <i class="fab fa-facebook-f text-[1.1rem]"></i>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-700 transition-colors">
+              <i class="fab fa-instagram text-[1.1rem]"></i>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-700 transition-colors">
+              <i class="fab fa-twitter text-[1.1rem]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+
